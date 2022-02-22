@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movie_provider/data/movie_api.dart';
 import 'package:flutter_movie_provider/ui/home_screen.dart';
-import 'package:flutter_movie_provider/ui/home_view_model.dart';
+import 'package:flutter_movie_provider/view_model/home_view_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {
