@@ -57,6 +57,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+/* Column 으로 잡은 후, 하단에 검색창과 GridView 로 리스트를 받아오는데
+   Expanded 로 꽉 채워준다.
+ */
       body: Column(
         children: [
           _buildTextField(),
@@ -71,6 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+// 검색어 입력시 데이터 값 반영.
   TextField _buildTextField() {
     return TextField(
       controller: _textEditingController,
@@ -97,6 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+// GridView 타입으로 받을 count 와 builder 를 지정해준다.
   GridView _buildGridView() {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -107,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       itemCount: _movies.length,
       itemBuilder: (context, index) {
+// 상세보기 화면으로 넘어가기.
         return InkWell(
           onTap: () {
             Navigator.push(
