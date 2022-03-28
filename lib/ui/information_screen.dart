@@ -13,7 +13,7 @@ class InformationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.red[200],
           title: Text(movie.title),
         ),
         body: Padding(
